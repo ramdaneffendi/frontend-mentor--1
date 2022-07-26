@@ -1,0 +1,151 @@
+/* Global custom setup properties and variables */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* color properties */
+
+    --clr-bg-primary : hsl(30, 38%, 92%);
+    --clr-bg-secondary : hsl(0, 0%, 100%);
+
+    --clr-green-primary : hsl(158, 36%, 37%);
+    --clr-green-secondary : hsl(156, 41%, 17%);
+
+    --clr-dark-primary : hsl(212, 21%, 14%);
+    --clr-dark-secondary : hsl(228, 12%, 48%) ;
+
+    /* typography */
+
+    --font-primary : 'Fraunces', serif;
+    --font-secondary : 'Montserrat', sans-serif;;
+
+    --font-size-h1 : 2em;
+    --font-size-h2 : 0.75em;
+    --font-size-p : 0.89em;
+
+}
+
+
+
+/* final project */
+
+body {background-color:var(--clr-bg-primary);}
+
+img {max-width: 100%;display: block;}
+
+.card-container {
+    background-color: var(--clr-bg-secondary);
+    border-radius: 10px;
+    width: 95%;
+    height: auto;
+    margin: 5px auto 5px;
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 0 25px 20px 20px;
+}
+
+.product-title{
+    font-family: var(--font-primary);
+    font-size: var(--font-size-h1);
+    font-weight: lighter;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.product-category{
+    font-family: var(--font-secondary);
+    color: var(--clr-dark-secondary);
+    letter-spacing: 0.4em;
+    font-size: var(--font-size-h2);
+    font-weight: 250;
+    margin-top: 35px;
+}
+.product-description{
+    font-family: var(--font-secondary);
+    color: var(--clr-dark-secondary);
+    font-size: 0.875em;
+    font-weight: 150;
+    line-height: 1.7;
+    opacity: 85%;
+    margin-top: 15px;
+}
+.primary-price{
+    font-family: var(--font-primary);
+    font-size: 2em;
+    color: var(--clr-green-primary);
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+.secondary-price{
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+    margin-left: 9px;
+    font-family: var(--font-secondary);
+    color: var(--clr-dark-secondary);
+    font-size: 0.4em;
+    font-weight: lighter;
+    opacity: 85%;
+    text-decoration: line-through;
+}
+
+.card-img{
+    display: block;
+    width: 100%;
+    object-fit: contain;
+}
+
+.main-btn{
+    display: inline-block;
+    text-decoration: none;
+    font-family: var(--font-secondary);
+    font-size: 0.8em;
+    background-color: var(--clr-green-primary);
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    border-radius: 9px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-icon {
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    width: fit-content;
+    margin-right: 5px;
+}
+
+.main-btn:hover{
+    background-color: var(--clr-green-secondary);
+}
+
+@media (min-width:450px) {
+    .card-container{
+        width: 600px;
+        margin: 170px auto;
+        display: flex;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .card-content{
+        padding: 0 30px 0 30px;
+    }
+
+    .card-img{
+        flex: 1 1 300px;
+    }
+
+    .card-content{
+        flex: 1 1 300px;
+    }
+   
+}
