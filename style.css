@@ -1,4 +1,5 @@
 /* Global custom setup properties and variables */
+
 *,
 *::before,
 *::after {
@@ -25,13 +26,12 @@
 
     --font-size-h1 : 2em;
     --font-size-h2 : 0.75em;
-    --font-size-p : 0.89em;
+    --font-size-p : 0.875em; /* exact 14px to me is too tight so I decrease a little bit */
 
 }
 
 
-
-/* final project */
+/* viewport on mobile, cause I code mobile first (like most people would suggest) :) */
 
 body {background-color:var(--clr-bg-primary);}
 
@@ -106,7 +106,7 @@ img {max-width: 100%;display: block;}
     font-family: var(--font-secondary);
     font-size: 0.8em;
     background-color: var(--clr-green-primary);
-    color: white;
+    color: var(--clr-bg-secondary);
     text-align: center;
     width: 100%;
     padding: 15px;
@@ -126,6 +126,8 @@ img {max-width: 100%;display: block;}
 .main-btn:hover{
     background-color: var(--clr-green-secondary);
 }
+
+/* viewport on desktop */
 
 @media (min-width:450px) {
     .card-container{
